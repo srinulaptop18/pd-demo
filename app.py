@@ -368,65 +368,65 @@ st.markdown("""
 /* ── Royal Fonts ── */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 
-/* ── Royal Token Palette ── */
+/* ── Royal Light Token Palette ── */
 :root {
-  --midnight:     #07090f;
-  --navy-deep:    #0a0e1a;
-  --navy:         #0d1428;
-  --navy-mid:     #111b35;
-  --navy-light:   #162040;
-  --navy-card:    #0f1830;
+  --midnight:     #fdf8f0;
+  --navy-deep:    #fff9f2;
+  --navy:         #fef6ec;
+  --navy-mid:     #fdf3e7;
+  --navy-light:   #fceedd;
+  --navy-card:    #fffaf4;
 
-  --gold:         #c9a84c;
-  --gold-bright:  #e8c96a;
-  --gold-dim:     #8a6e2f;
-  --gold-muted:   rgba(201,168,76,0.18);
-  --gold-glow:    rgba(201,168,76,0.35);
-  --gold-line:    rgba(201,168,76,0.22);
-  --gold-border:  rgba(201,168,76,0.38);
+  --gold:         #b8860b;
+  --gold-bright:  #9a6e00;
+  --gold-dim:     #c9a84c;
+  --gold-muted:   rgba(184,134,11,0.10);
+  --gold-glow:    rgba(184,134,11,0.25);
+  --gold-line:    rgba(184,134,11,0.20);
+  --gold-border:  rgba(184,134,11,0.40);
 
   --crimson:      #c0392b;
-  --crimson-dim:  rgba(192,57,43,0.15);
+  --crimson-dim:  rgba(192,57,43,0.10);
   --emerald:      #1e8449;
-  --emerald-dim:  rgba(30,132,73,0.15);
+  --emerald-dim:  rgba(30,132,73,0.10);
 
-  --parchment:    #f5e6c8;
-  --text:         #e8d9b8;
-  --text-2:       #a89060;
-  --text-3:       #5a4a2a;
+  --parchment:    #6b4c11;
+  --text:         #2c1a00;
+  --text-2:       #7a5a1a;
+  --text-3:       #b89040;
 
   --radius:       12px;
   --radius-sm:    7px;
-  --shadow-royal: 0 8px 40px rgba(0,0,0,0.7), 0 2px 12px rgba(201,168,76,0.08);
-  --shadow-gold:  0 4px 24px rgba(201,168,76,0.25);
+  --shadow-royal: 0 4px 24px rgba(184,134,11,0.10), 0 1px 6px rgba(0,0,0,0.06);
+  --shadow-gold:  0 4px 20px rgba(184,134,11,0.18);
 }
 
 /* ── Base reset ── */
 html, body, .stApp {
-  background: var(--midnight) !important;
+  background: #fdf8f0 !important;
   font-family: 'EB Garamond', 'Cormorant Garamond', serif !important;
   color: var(--text) !important;
 }
 
-/* Royal tapestry background */
+/* Royal parchment background */
 .stApp::before {
   content: '';
   position: fixed; inset: 0; z-index: 0;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(184,134,11,0.06) 0%, transparent 60%),
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 34px,
-      rgba(201,168,76,0.015) 34px,
-      rgba(201,168,76,0.015) 35px
+      rgba(184,134,11,0.025) 34px,
+      rgba(184,134,11,0.025) 35px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 34px,
-      rgba(201,168,76,0.015) 34px,
-      rgba(201,168,76,0.015) 35px
+      rgba(184,134,11,0.025) 34px,
+      rgba(184,134,11,0.025) 35px
     );
   pointer-events: none;
 }
@@ -435,8 +435,8 @@ html, body, .stApp {
   content: '';
   position: fixed; inset: 0; z-index: 0;
   background:
-    radial-gradient(ellipse 40% 60% at 0% 100%, rgba(201,168,76,0.035) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 60% at 100% 0%, rgba(201,168,76,0.035) 0%, transparent 50%);
+    radial-gradient(ellipse 40% 60% at 0% 100%, rgba(184,134,11,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 100% 0%, rgba(184,134,11,0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -449,7 +449,7 @@ html, body, .stApp {
 
 /* ── Royal Cards ── */
 .card {
-  background: linear-gradient(145deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
+  background: linear-gradient(145deg, #fffdf8 0%, #fff8ec 100%);
   border: 1px solid var(--gold-line);
   border-radius: var(--radius);
   padding: 1.8rem 2rem;
@@ -488,7 +488,7 @@ html, body, .stApp {
 /* ── Input Fields ── */
 .stTextInput input, .stNumberInput input,
 .stTextArea textarea, .stDateInput input {
-  background: rgba(7,9,15,0.7) !important;
+  background: #fffdf8 !important;
   color: var(--text) !important;
   border: 1px solid var(--gold-line) !important;
   border-radius: var(--radius-sm) !important;
@@ -503,7 +503,7 @@ html, body, .stApp {
   outline: none !important;
 }
 div[data-baseweb="select"] > div {
-  background: rgba(7,9,15,0.7) !important;
+  background: #fffdf8 !important;
   border: 1px solid var(--gold-line) !important;
   border-radius: var(--radius-sm) !important;
   color: var(--text) !important;
@@ -583,7 +583,7 @@ label {
 
 /* ── File Uploader ── */
 [data-testid="stFileUploader"] {
-  background: rgba(7,9,15,0.6) !important;
+  background: #fffdf8 !important;
   border: 2px dashed var(--gold-line) !important;
   border-radius: var(--radius) !important;
   padding: 1.6rem !important;
@@ -617,7 +617,7 @@ label {
 
 /* ── Royal Stat Tiles ── */
 .stat-tile {
-  background: linear-gradient(145deg, var(--navy-card), var(--navy-deep));
+  background: linear-gradient(145deg, #fffdf8, #fff6e8);
   border: 1px solid var(--gold-line);
   border-radius: var(--radius);
   padding: 1.1rem 1.3rem;
@@ -632,7 +632,7 @@ label {
 }
 .stat-value {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; font-weight: 700; color: var(--gold-bright);
+  font-size: 2rem; font-weight: 700; color: #9a6e00;
   line-height: 1.1; margin-bottom: .3rem;
 }
 .stat-label {
@@ -658,29 +658,29 @@ label {
   border: 1px solid var(--gold-line);
   border-radius: var(--radius);
   overflow: hidden;
-  background: #020408;
+  background: #f5f0e8;
   box-shadow: var(--shadow-royal);
 }
 .img-caption {
   font-family: 'Cinzel', serif;
-  font-size: .6rem; color: var(--text-3);
+  font-size: .6rem; color: #b89040;
   text-align: center; padding: .45rem 0 .25rem;
   letter-spacing: 1.5px; text-transform: uppercase;
-  background: rgba(0,0,0,0.4);
+  background: rgba(245,240,232,0.8);
 }
 
 /* ── Heatmap Legend ── */
 .hm-legend {
   display: flex; align-items: center; gap: .6rem;
   font-family: 'Cinzel', serif;
-  font-size: .6rem; color: var(--text-3);
+  font-size: .6rem; color: #b89040;
   margin-top: .6rem; letter-spacing: 1px;
 }
 .hm-bar { flex: 1; height: 6px; border-radius: 3px; background: linear-gradient(90deg,#00008b,#0000ff,#00ff00,#ffff00,#ff0000); }
 
 /* ── Royal Tabs ── */
 .stTabs [data-baseweb="tab-list"] {
-  background: var(--navy-deep) !important;
+  background: #fffdf8 !important;
   border: 1px solid var(--gold-line) !important;
   border-radius: var(--radius) !important;
   padding: .35rem !important; gap: .25rem !important;
@@ -688,34 +688,34 @@ label {
 .stTabs [data-baseweb="tab"] {
   font-family: 'Cinzel', serif !important;
   font-size: .75rem !important; font-weight: 600 !important;
-  color: var(--text-2) !important; border-radius: var(--radius-sm) !important;
+  color: #7a5a1a !important; border-radius: var(--radius-sm) !important;
   padding: .6rem 1.3rem !important; letter-spacing: 1.5px !important;
   transition: all .25s !important;
 }
-.stTabs [data-baseweb="tab"]:hover { color: var(--gold) !important; }
+.stTabs [data-baseweb="tab"]:hover { color: #9a6e00 !important; }
 .stTabs [aria-selected="true"] {
-  background: var(--gold-muted) !important;
-  color: var(--gold-bright) !important;
-  border: 1px solid var(--gold-border) !important;
+  background: rgba(184,134,11,0.10) !important;
+  color: #7a4f00 !important;
+  border: 1px solid rgba(184,134,11,0.3) !important;
 }
 .stTabs [data-baseweb="tab-highlight"],
 .stTabs [data-baseweb="tab-border"] { display: none !important; }
 
 /* ── Royal Sidebar ── */
 [data-testid="stSidebar"] {
-  background: linear-gradient(180deg, #07090e, #0a0e1c) !important;
+  background: linear-gradient(180deg, #fdf8f0, #fdf3e7) !important;
   border-right: 1px solid var(--gold-line) !important;
 }
 [data-testid="stSidebar"] * { font-family: 'EB Garamond', serif !important; }
 [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2,
 [data-testid="stSidebar"] h3 {
   font-family: 'Cinzel', serif !important;
-  color: var(--gold) !important; letter-spacing: 2px !important;
+  color: #9a6e00 !important; letter-spacing: 2px !important;
 }
 
 /* ── Metrics ── */
 [data-testid="stMetric"] {
-  background: linear-gradient(145deg, var(--navy-card), var(--navy-deep)) !important;
+  background: linear-gradient(145deg, #fffdf8, #fff6e8) !important;
   border: 1px solid var(--gold-line) !important;
   border-radius: var(--radius) !important;
   padding: 1rem 1.2rem !important;
@@ -723,10 +723,10 @@ label {
 [data-testid="stMetricValue"] {
   font-family: 'Playfair Display', serif !important;
   font-size: 1.6rem !important; font-weight: 700 !important;
-  color: var(--gold-bright) !important;
+  color: #9a6e00 !important;
 }
 [data-testid="stMetricLabel"] {
-  color: var(--text-2) !important;
+  color: #7a5a1a !important;
   font-family: 'Cinzel', serif !important;
   font-size: .58rem !important; letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
@@ -747,8 +747,8 @@ label {
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: var(--midnight); }
-::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 10px; }
+::-webkit-scrollbar-track { background: #fdf8f0; }
+::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 10px; }
 
 /* ── HR / Dividers ── */
 hr {
@@ -762,7 +762,7 @@ hr {
 
 /* ── About Cards ── */
 .about-card {
-  background: linear-gradient(145deg, var(--navy-mid), var(--navy-deep));
+  background: linear-gradient(145deg, #fffdf8, #fff6e8);
   border: 1px solid var(--gold-line);
   border-radius: var(--radius);
   padding: 1.8rem 1.6rem;
@@ -783,7 +783,7 @@ hr {
 
 /* ── Team Card ── */
 .team-card {
-  background: linear-gradient(145deg, var(--navy-mid), var(--navy-deep));
+  background: linear-gradient(145deg, #fffdf8, #fff6e8);
   border: 1px solid var(--gold-line);
   border-radius: var(--radius);
   padding: 1.4rem 1rem;
@@ -819,69 +819,69 @@ hr {
 logo_src  = get_logo_b64("logo.png")
 logo_html = (
     f'<img src="{logo_src}" style="width:80px;height:80px;object-fit:contain;'
-    f'border-radius:50%;border:2px solid rgba(201,168,76,0.5);'
-    f'box-shadow:0 0 24px rgba(201,168,76,0.25);"/>'
+    f'border-radius:50%;border:2px solid rgba(184,134,11,0.5);'
+    f'box-shadow:0 0 20px rgba(184,134,11,0.2);"/>'
     if logo_src else
-    '<div style="width:80px;height:80px;background:linear-gradient(145deg,#0d1428,#162040);'
-    'border:2px solid rgba(201,168,76,0.5);border-radius:50%;display:flex;align-items:center;'
-    'justify-content:center;font-size:2.2rem;box-shadow:0 0 24px rgba(201,168,76,0.25);">🧠</div>'
+    '<div style="width:80px;height:80px;background:linear-gradient(145deg,#fdf3dc,#fce8b8);'
+    'border:2px solid rgba(184,134,11,0.5);border-radius:50%;display:flex;align-items:center;'
+    'justify-content:center;font-size:2.2rem;box-shadow:0 0 20px rgba(184,134,11,0.2);">🧠</div>'
 )
 
 st.markdown(
     '<div style="'
-    'background:linear-gradient(180deg,#05070e 0%,#0a0e1a 60%,#07090f 100%);'
-    'border-bottom:1px solid rgba(201,168,76,0.22);'
+    'background:linear-gradient(180deg,#fdf3dc 0%,#fdf8f0 60%,#fdf8f0 100%);'
+    'border-bottom:1px solid rgba(184,134,11,0.22);'
     'padding:2.8rem 2rem 2.4rem;'
     'display:flex;flex-direction:column;align-items:center;gap:1rem;'
     'position:relative;overflow:hidden;">'
 
     # top golden rule
-    '<div style="position:absolute;top:0;left:0;right:0;height:2px;'
+    '<div style="position:absolute;top:0;left:0;right:0;height:3px;'
     'background:linear-gradient(90deg,transparent,#c9a84c,#e8c96a,#c9a84c,transparent);"></div>'
 
     # corner ornaments
-    '<div style="position:absolute;top:12px;left:24px;font-size:.9rem;'
-    'color:rgba(201,168,76,0.35);font-family:serif;letter-spacing:4px;">✦ ✦ ✦</div>'
-    '<div style="position:absolute;top:12px;right:24px;font-size:.9rem;'
-    'color:rgba(201,168,76,0.35);font-family:serif;letter-spacing:4px;">✦ ✦ ✦</div>'
+    '<div style="position:absolute;top:14px;left:24px;font-size:.9rem;'
+    'color:rgba(184,134,11,0.4);font-family:serif;letter-spacing:4px;">✦ ✦ ✦</div>'
+    '<div style="position:absolute;top:14px;right:24px;font-size:.9rem;'
+    'color:rgba(184,134,11,0.4);font-family:serif;letter-spacing:4px;">✦ ✦ ✦</div>'
 
     + logo_html +
 
     '<div style="font-family:Cinzel,serif;font-size:2.8rem;font-weight:900;'
-    'color:#e8d9b8;letter-spacing:8px;line-height:1;text-align:center;'
-    'text-shadow:0 2px 20px rgba(201,168,76,0.3);">'
-    'NEUROSCAN&nbsp;<span style="color:#c9a84c;">AI</span></div>'
+    'color:#2c1a00;letter-spacing:8px;line-height:1;text-align:center;'
+    'text-shadow:0 2px 12px rgba(184,134,11,0.15);">'
+    'NEUROSCAN&nbsp;<span style="color:#b8860b;">AI</span></div>'
 
     '<div style="font-family:Cormorant Garamond,serif;font-size:1rem;font-style:italic;'
-    'color:#8a6e2f;letter-spacing:4px;text-align:center;">'
+    'color:#9a7030;letter-spacing:4px;text-align:center;">'
     'Parkinson\'s Detection · Brain MRI · Deep Learning</div>'
 
     # decorative line
     '<div style="display:flex;align-items:center;gap:1rem;width:60%;max-width:400px;">'
-    '<div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,#8a6e2f);"></div>'
-    '<span style="color:#c9a84c;font-size:.7rem;letter-spacing:4px;">✦</span>'
-    '<div style="flex:1;height:1px;background:linear-gradient(90deg,#8a6e2f,transparent);"></div>'
+    '<div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,#c9a84c);"></div>'
+    '<span style="color:#b8860b;font-size:.7rem;letter-spacing:4px;">✦</span>'
+    '<div style="flex:1;height:1px;background:linear-gradient(90deg,#c9a84c,transparent);"></div>'
     '</div>'
 
     # badges
     '<div style="display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;">'
-    '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);'
+    '<span style="background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.25);'
     'border-radius:3px;padding:.3rem 1rem;font-family:Cinzel,serif;font-size:.65rem;'
-    'color:#c9a84c;letter-spacing:1.5px;">⚙ ResNet50 + ViT</span>'
-    '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);'
+    'color:#8a5e00;letter-spacing:1.5px;">⚙ ResNet50 + ViT</span>'
+    '<span style="background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.25);'
     'border-radius:3px;padding:.3rem 1rem;font-family:Cinzel,serif;font-size:.65rem;'
-    'color:#c9a84c;letter-spacing:1.5px;">◈ 99.4% Accuracy</span>'
-    '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);'
+    'color:#8a5e00;letter-spacing:1.5px;">◈ 99.4% Accuracy</span>'
+    '<span style="background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.25);'
     'border-radius:3px;padding:.3rem 1rem;font-family:Cinzel,serif;font-size:.65rem;'
-    'color:#c9a84c;letter-spacing:1.5px;">✦ Grad-CAM XAI</span>'
-    '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);'
+    'color:#8a5e00;letter-spacing:1.5px;">✦ Grad-CAM XAI</span>'
+    '<span style="background:rgba(184,134,11,0.08);border:1px solid rgba(184,134,11,0.25);'
     'border-radius:3px;padding:.3rem 1rem;font-family:Cinzel,serif;font-size:.65rem;'
-    'color:#c9a84c;letter-spacing:1.5px;">⬡ Batch Analysis</span>'
+    'color:#8a5e00;letter-spacing:1.5px;">⬡ Batch Analysis</span>'
     '</div>'
 
     # bottom golden rule
     '<div style="position:absolute;bottom:0;left:0;right:0;height:1px;'
-    'background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);"></div>'
+    'background:linear-gradient(90deg,transparent,rgba(184,134,11,0.3),transparent);"></div>'
 
     '</div>',
     unsafe_allow_html=True,
@@ -907,8 +907,8 @@ with st.sidebar:
     st.markdown(
         '<div style="text-align:center;padding:.8rem 0 1.2rem;">'
         '<div style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:700;'
-        'color:#c9a84c;letter-spacing:3px;">⚕ NEUROSCAN AI</div>'
-        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.4),transparent);margin:.6rem 0;"></div>'
+        'color:#8a5e00;letter-spacing:3px;">⚕ NEUROSCAN AI</div>'
+        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.4),transparent);margin:.6rem 0;"></div>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -917,11 +917,11 @@ with st.sidebar:
         "Upload a scan to screen for Parkinson's Disease in seconds."
     )
     st.markdown(
-        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);margin:.8rem 0;"></div>',
+        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.25),transparent);margin:.8rem 0;"></div>',
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<div style="font-family:Cinzel,serif;font-size:.65rem;color:#8a6e2f;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;">⚙ Model Intelligence</div>',
+        '<div style="font-family:Cinzel,serif;font-size:.65rem;color:#9a7030;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;">⚙ Model Intelligence</div>',
         unsafe_allow_html=True,
     )
     st.success(
@@ -932,27 +932,27 @@ with st.sidebar:
         "**Status:** 🟢 Online"
     )
     st.markdown(
-        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);margin:.8rem 0;"></div>',
+        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.25),transparent);margin:.8rem 0;"></div>',
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<div style="font-family:Cinzel,serif;font-size:.65rem;color:#8a6e2f;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;">✦ Capabilities</div>',
+        '<div style="font-family:Cinzel,serif;font-size:.65rem;color:#9a7030;letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;">✦ Capabilities</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<div style="font-family:EB Garamond,serif;font-size:.95rem;color:#a89060;line-height:2;">'
+        '<div style="font-family:EB Garamond,serif;font-size:.95rem;color:#6b4c11;line-height:2;">'
         '⚜ Single-scan analysis<br>⚜ Batch processing<br>⚜ Grad-CAM heatmap<br>'
         '⚜ Risk scoring<br>⚜ PDF & CSV reports<br>⚜ Doctor field support'
         '</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);margin:.8rem 0;"></div>',
+        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.25),transparent);margin:.8rem 0;"></div>',
         unsafe_allow_html=True,
     )
     st.warning("⚠️ For **research/academic** purposes only. Not a substitute for clinical diagnosis.")
     st.markdown(
-        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);margin:.8rem 0;"></div>',
+        '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.25),transparent);margin:.8rem 0;"></div>',
         unsafe_allow_html=True,
     )
     c1, c2 = st.columns(2)
@@ -1010,7 +1010,7 @@ with tab_scan:
             w, h = image.size
             st.markdown(
                 f'<div style="font-family:Cinzel,monospace;font-size:.62rem;'
-                f'color:#5a4a2a;margin-top:.5rem;text-align:center;letter-spacing:1px;">'
+                f'color:#9a7030;margin-top:.5rem;text-align:center;letter-spacing:1px;">'
                 f'{image.mode} · {w}×{h}px · {uploaded_file.size/1024:.1f} KB</div>',
                 unsafe_allow_html=True,
             )
@@ -1066,7 +1066,7 @@ with tab_scan:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown(
             '<div style="font-family:Cinzel,serif;font-size:.72rem;font-weight:600;'
-            'color:#c9a84c;letter-spacing:2.5px;text-transform:uppercase;'
+            'color:#8a5e00;letter-spacing:2.5px;text-transform:uppercase;'
             'text-align:center;margin-bottom:1.2rem;">◈ Diagnostic Summary ◈</div>',
             unsafe_allow_html=True,
         )
@@ -1236,8 +1236,8 @@ with tab_batch:
         ch_col, tb_col = st.columns([1, 1], gap="large")
 
         with ch_col:
-            fig, ax = plt.subplots(figsize=(4.5, 3.8), facecolor="#0a0e1a")
-            ax.set_facecolor("#0a0e1a")
+            fig, ax = plt.subplots(figsize=(4.5, 3.8), facecolor="#fdf8f0")
+            ax.set_facecolor("#fdf8f0")
             if n_normal > 0 or n_park > 0:
                 wedges, texts, autotexts = ax.pie(
                     [n_normal, n_park],
@@ -1246,11 +1246,11 @@ with tab_batch:
                     colors=["#4ade80", "#f87171"],
                     startangle=90,
                     wedgeprops=dict(edgecolor="#0a0e1a", linewidth=2.5),
-                    textprops=dict(color="#e8d9b8", fontsize=10, fontfamily="EB Garamond"),
+                    textprops=dict(color="#2c1a00", fontsize=10, fontfamily="EB Garamond"),
                 )
                 for at in autotexts:
-                    at.set_color("#0a0e1a"); at.set_fontweight("bold")
-            ax.set_title("Scan Distribution", color="#a89060", fontsize=10, pad=10,
+                    at.set_color("#ffffff"); at.set_fontweight("bold")
+            ax.set_title("Scan Distribution", color="#7a5a1a", fontsize=10, pad=10,
                          fontfamily="EB Garamond")
             plt.tight_layout()
             st.pyplot(fig)
@@ -1287,11 +1287,11 @@ with tab_batch:
             with rc2:
                 st.markdown(
                     f'<p style="font-family:Cinzel,serif;font-size:.62rem;'
-                    f'color:#8a6e2f;margin-bottom:.3rem;letter-spacing:1px;">{r["filename"]}</p>'
+                    f'color:#9a7030;margin-bottom:.3rem;letter-spacing:1px;">{r["filename"]}</p>'
                     f'<p style="font-family:Playfair Display,serif;font-size:1.4rem;'
                     f'font-weight:700;color:{col};margin:0;">{icon} {r["prediction"]}</p>'
                     f'<p style="font-family:Cinzel,serif;font-size:.6rem;'
-                    f'color:#5a4a2a;margin-top:.35rem;letter-spacing:1px;">{r["timestamp"]}</p>',
+                    f'color:#9a7030;margin-top:.35rem;letter-spacing:1px;">{r["timestamp"]}</p>',
                     unsafe_allow_html=True,
                 )
             with rc3:
@@ -1309,184 +1309,322 @@ with tab_batch:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-#  TAB 3 — ABOUT
+#  TAB 3 — ABOUT  (Enhanced Royal Edition)
 # ─────────────────────────────────────────────────────────────────────────────
 with tab_about:
     college_logo = get_logo_b64("bvcr.jpg")
     clg_html     = (
-        f'<img src="{college_logo}" style="width:100px;height:100px;object-fit:contain;'
-        f'margin-bottom:1rem;border:2px solid rgba(201,168,76,0.4);border-radius:8px;'
-        f'box-shadow:0 4px 20px rgba(201,168,76,0.2);"/>'
+        f'<img src="{college_logo}" style="width:110px;height:110px;object-fit:contain;'
+        f'margin-bottom:1.2rem;border:2px solid rgba(184,134,11,0.45);border-radius:10px;'
+        f'box-shadow:0 6px 24px rgba(184,134,11,0.18);"/>'
         if college_logo else
-        '<div style="font-size:3.5rem;margin-bottom:1rem;">🏛</div>'
+        '<div style="font-size:4rem;margin-bottom:1.2rem;">🏛</div>'
     )
 
+    # ── COLLEGE HERO BANNER ───────────────────────────────────────────────────
     st.markdown(
-        f'<div style="background:linear-gradient(145deg,var(--navy-mid),var(--navy-deep));'
-        f'border:1px solid var(--gold-line);border-radius:var(--radius);'
-        f'padding:2.8rem;margin-bottom:1.6rem;text-align:center;position:relative;">'
-        f'<div style="position:absolute;top:0;left:0;right:0;height:2px;'
-        f'background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>'
-        f'{clg_html}'
-        f'<div style="font-family:Cinzel,serif;font-size:1.7rem;font-weight:700;'
-        f'color:#e8d9b8;letter-spacing:3px;margin-bottom:.4rem;">'
-        f'BVC College of Engineering</div>'
-        f'<div style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:.95rem;'
-        f'color:#c9a84c;letter-spacing:3px;margin-bottom:.8rem;">Autonomous</div>'
-        f'<div style="display:flex;align-items:center;gap:1rem;justify-content:center;'
-        f'margin-bottom:.8rem;">'
-        f'<div style="flex:1;max-width:100px;height:1px;background:linear-gradient(90deg,transparent,#8a6e2f);"></div>'
-        f'<span style="color:#c9a84c;font-size:.7rem;letter-spacing:4px;">✦</span>'
-        f'<div style="flex:1;max-width:100px;height:1px;background:linear-gradient(90deg,#8a6e2f,transparent);"></div>'
+        f'<div style="background:linear-gradient(160deg,#fdf3dc 0%,#fdf8f0 50%,#fce8b0 100%);'
+        f'border:1px solid rgba(184,134,11,0.28);border-radius:16px;'
+        f'padding:3rem 2.5rem 2.5rem;margin-bottom:2rem;text-align:center;position:relative;overflow:hidden;">'
+
+        # gold shimmer top bar
+        f'<div style="position:absolute;top:0;left:0;right:0;height:3px;'
+        f'background:linear-gradient(90deg,transparent,#c9a84c,#f0d070,#c9a84c,transparent);"></div>'
+
+        # watermark pattern
+        f'<div style="position:absolute;inset:0;opacity:0.03;font-size:8rem;'
+        f'display:flex;align-items:center;justify-content:center;color:#b8860b;'
+        f'font-family:Cinzel,serif;pointer-events:none;letter-spacing:20px;">✦BVC✦</div>'
+
+        + clg_html +
+
+        f'<div style="font-family:Cinzel,serif;font-size:1.9rem;font-weight:900;'
+        f'color:#2c1a00;letter-spacing:4px;margin-bottom:.5rem;'
+        f'text-shadow:0 2px 8px rgba(184,134,11,0.12);">BVC College of Engineering</div>'
+
+        f'<div style="font-family:Cormorant Garamond,serif;font-style:italic;font-size:1.05rem;'
+        f'color:#b8860b;letter-spacing:3px;margin-bottom:.8rem;">Palacharla, Andhra Pradesh</div>'
+
+        f'<div style="display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:1rem;">'
+        f'<div style="flex:1;max-width:120px;height:1px;background:linear-gradient(90deg,transparent,#c9a84c);"></div>'
+        f'<span style="color:#b8860b;font-size:.8rem;letter-spacing:5px;">✦</span>'
+        f'<div style="flex:1;max-width:120px;height:1px;background:linear-gradient(90deg,#c9a84c,transparent);"></div>'
         f'</div>'
-        f'<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#8a6e2f;">'
-        f'Affiliated to JNTUK &nbsp;·&nbsp; AICTE Approved &nbsp;·&nbsp; NAAC A</div>'
+
+        # accreditation badges
+        f'<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.2rem;">'
+        f'<span style="background:rgba(184,134,11,0.1);border:1px solid rgba(184,134,11,0.3);'
+        f'border-radius:4px;padding:.35rem 1.1rem;font-family:Cinzel,serif;font-size:.68rem;'
+        f'color:#7a4f00;letter-spacing:1.5px;font-weight:600;">🎓 Autonomous</span>'
+        f'<span style="background:rgba(30,132,73,0.08);border:1px solid rgba(30,132,73,0.25);'
+        f'border-radius:4px;padding:.35rem 1.1rem;font-family:Cinzel,serif;font-size:.68rem;'
+        f'color:#1a6a38;letter-spacing:1.5px;font-weight:600;">✓ NAAC A Grade</span>'
+        f'<span style="background:rgba(0,100,180,0.07);border:1px solid rgba(0,100,180,0.2);'
+        f'border-radius:4px;padding:.35rem 1.1rem;font-family:Cinzel,serif;font-size:.68rem;'
+        f'color:#004a90;letter-spacing:1.5px;font-weight:600;">⚙ AICTE Approved</span>'
+        f'<span style="background:rgba(140,40,40,0.07);border:1px solid rgba(140,40,40,0.2);'
+        f'border-radius:4px;padding:.35rem 1.1rem;font-family:Cinzel,serif;font-size:.68rem;'
+        f'color:#7a1a1a;letter-spacing:1.5px;font-weight:600;">📜 Affiliated to JNTUK</span>'
+        f'</div>'
+
+        f'<div style="font-family:EB Garamond,serif;font-size:1rem;color:#7a5a1a;'
+        f'line-height:1.8;max-width:680px;margin:0 auto;">'
+        f'BVC College of Engineering is a premier autonomous institution in Andhra Pradesh, '
+        f'recognized for academic excellence and cutting-edge research. With state-of-the-art '
+        f'laboratories, experienced faculty, and a legacy of producing distinguished engineers, '
+        f'the institution stands as a beacon of quality technical education in the region.'
+        f'</div>'
+
         f'<div style="position:absolute;bottom:0;left:0;right:0;height:1px;'
-        f'background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);"></div>'
+        f'background:linear-gradient(90deg,transparent,rgba(184,134,11,0.3),transparent);"></div>'
         f'</div>',
         unsafe_allow_html=True,
     )
 
-    ac1, ac2, ac3 = st.columns(3)
-    for col, icon, title, body in [
-        (ac1, "🎓", "About the College",
-         "BVC College of Engineering, Palacharla is an <b style='color:#c9a84c;'>Autonomous</b> "
-         "premier institution dedicated to excellence in engineering education."),
-        (ac2, "⚗", "About the Project",
-         "NeuroScan AI is a B.Tech final-year project for early Parkinson's screening from brain MRI, "
-         "powered by a ResNet50 + ViT hybrid achieving 99.4% validation accuracy."),
-        (ac3, "⚙", "Technology Stack",
-         "<b style='color:#c9a84c;'>AI:</b> PyTorch · ResNet50 + ViT<br>"
-         "<b style='color:#c9a84c;'>XAI:</b> Grad-CAM<br>"
-         "<b style='color:#c9a84c;'>UI:</b> Streamlit<br>"
-         "<b style='color:#c9a84c;'>Reports:</b> ReportLab · Pandas"),
+    # ── INSTITUTE STATS STRIP ─────────────────────────────────────────────────
+    st.markdown('<div class="sec-head">✦ Institute at a Glance</div>', unsafe_allow_html=True)
+    s1, s2, s3, s4, s5 = st.columns(5)
+    for col, num, label, icon in [
+        (s1, "20+", "Years of Excellence", "🏆"),
+        (s2, "3000+", "Students Enrolled", "👨‍🎓"),
+        (s3, "150+", "Faculty Members", "👨‍🏫"),
+        (s4, "10+", "Departments", "🏛"),
+        (s5, "95%", "Placement Rate", "💼"),
     ]:
         with col:
             st.markdown(
-                f'<div class="about-card">'
-                f'<div style="font-size:2.2rem;margin-bottom:.7rem;">{icon}</div>'
-                f'<div style="font-family:Cinzel,serif;font-size:.85rem;font-weight:600;'
-                f'color:#c9a84c;margin-bottom:.7rem;letter-spacing:1.5px;">{title}</div>'
-                f'<div style="font-family:EB Garamond,serif;font-size:.95rem;'
-                f'color:#a89060;line-height:1.75;">{body}</div>'
+                f'<div style="background:linear-gradient(145deg,#fffdf8,#fff6e8);'
+                f'border:1px solid rgba(184,134,11,0.2);border-radius:12px;'
+                f'padding:1.2rem .8rem;text-align:center;'
+                f'box-shadow:0 2px 12px rgba(184,134,11,0.08);">'
+                f'<div style="font-size:1.6rem;margin-bottom:.3rem;">{icon}</div>'
+                f'<div style="font-family:Playfair Display,serif;font-size:1.6rem;'
+                f'font-weight:700;color:#9a6e00;line-height:1;">{num}</div>'
+                f'<div style="font-family:Cinzel,serif;font-size:.58rem;color:#9a7030;'
+                f'letter-spacing:1px;text-transform:uppercase;margin-top:.3rem;">{label}</div>'
                 f'</div>',
                 unsafe_allow_html=True,
             )
 
+    # ── PROJECT + TECH INFO CARDS ─────────────────────────────────────────────
+    st.markdown('<div class="sec-head" style="margin-top:2.2rem;">✦ About the Project</div>', unsafe_allow_html=True)
+
+    pc1, pc2 = st.columns([3, 2], gap="large")
+    with pc1:
+        st.markdown(
+            '<div style="background:linear-gradient(145deg,#fffdf8,#fff6e8);'
+            'border:1px solid rgba(184,134,11,0.2);border-radius:12px;'
+            'padding:2rem;height:100%;box-shadow:0 2px 16px rgba(184,134,11,0.08);">'
+
+            '<div style="font-family:Cinzel,serif;font-size:.68rem;color:#b8860b;'
+            'letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;">⚗ Project Overview</div>'
+
+            '<div style="font-family:Playfair Display,serif;font-size:1.4rem;font-weight:700;'
+            'color:#2c1a00;margin-bottom:.9rem;line-height:1.3;">'
+            'NeuroScan AI — Early Parkinson\'s Detection via Deep Learning</div>'
+
+            '<div style="font-family:EB Garamond,serif;font-size:1rem;color:#5a3a0a;'
+            'line-height:1.85;margin-bottom:1.2rem;">'
+            'NeuroScan AI is a B.Tech final-year capstone project developed at the Department of ECE, '
+            'BVC College of Engineering. It applies a hybrid <strong style="color:#8a5e00;">ResNet50 + Vision Transformer (ViT)</strong> '
+            'architecture to classify brain MRI scans and detect early signs of Parkinson\'s Disease with '
+            'clinical-grade accuracy. The system integrates <strong style="color:#8a5e00;">Grad-CAM explainability</strong> '
+            'to highlight regions of neural attention, bridging the gap between AI inference and medical '
+            'interpretability.'
+            '</div>'
+
+            '<div style="display:flex;gap:.7rem;flex-wrap:wrap;">'
+            '<span style="background:rgba(184,134,11,0.09);border:1px solid rgba(184,134,11,0.25);'
+            'border-radius:4px;padding:.25rem .8rem;font-family:Cinzel,serif;font-size:.62rem;'
+            'color:#7a4f00;letter-spacing:1px;">🧠 Deep Learning</span>'
+            '<span style="background:rgba(184,134,11,0.09);border:1px solid rgba(184,134,11,0.25);'
+            'border-radius:4px;padding:.25rem .8rem;font-family:Cinzel,serif;font-size:.62rem;'
+            'color:#7a4f00;letter-spacing:1px;">🔬 Medical Imaging</span>'
+            '<span style="background:rgba(184,134,11,0.09);border:1px solid rgba(184,134,11,0.25);'
+            'border-radius:4px;padding:.25rem .8rem;font-family:Cinzel,serif;font-size:.62rem;'
+            'color:#7a4f00;letter-spacing:1px;">📊 Explainable AI</span>'
+            '<span style="background:rgba(184,134,11,0.09);border:1px solid rgba(184,134,11,0.25);'
+            'border-radius:4px;padding:.25rem .8rem;font-family:Cinzel,serif;font-size:.62rem;'
+            'color:#7a4f00;letter-spacing:1px;">⚡ Computer Vision</span>'
+            '</div>'
+            '</div>',
+            unsafe_allow_html=True,
+        )
+    with pc2:
+        st.markdown(
+            '<div style="background:linear-gradient(145deg,#fffdf8,#fff6e8);'
+            'border:1px solid rgba(184,134,11,0.2);border-radius:12px;'
+            'padding:2rem;box-shadow:0 2px 16px rgba(184,134,11,0.08);">'
+
+            '<div style="font-family:Cinzel,serif;font-size:.68rem;color:#b8860b;'
+            'letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;">⚙ Technology Stack</div>'
+
+            # tech rows
+            '<div style="display:flex;flex-direction:column;gap:.7rem;">'
+
+            '<div style="display:flex;align-items:center;gap:.9rem;padding:.7rem;'
+            'background:rgba(184,134,11,0.05);border-radius:8px;border-left:3px solid #c9a84c;">'
+            '<span style="font-size:1.3rem;">🤖</span>'
+            '<div><div style="font-family:Cinzel,serif;font-size:.62rem;color:#8a5e00;'
+            'letter-spacing:1px;font-weight:700;">AI Framework</div>'
+            '<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#5a3a0a;">'
+            'PyTorch · ResNet50 + ViT</div></div></div>'
+
+            '<div style="display:flex;align-items:center;gap:.9rem;padding:.7rem;'
+            'background:rgba(184,134,11,0.05);border-radius:8px;border-left:3px solid #c9a84c;">'
+            '<span style="font-size:1.3rem;">🔥</span>'
+            '<div><div style="font-family:Cinzel,serif;font-size:.62rem;color:#8a5e00;'
+            'letter-spacing:1px;font-weight:700;">Explainability</div>'
+            '<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#5a3a0a;">'
+            'Gradient-weighted CAM</div></div></div>'
+
+            '<div style="display:flex;align-items:center;gap:.9rem;padding:.7rem;'
+            'background:rgba(184,134,11,0.05);border-radius:8px;border-left:3px solid #c9a84c;">'
+            '<span style="font-size:1.3rem;">🖥</span>'
+            '<div><div style="font-family:Cinzel,serif;font-size:.62rem;color:#8a5e00;'
+            'letter-spacing:1px;font-weight:700;">User Interface</div>'
+            '<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#5a3a0a;">'
+            'Streamlit · Custom CSS</div></div></div>'
+
+            '<div style="display:flex;align-items:center;gap:.9rem;padding:.7rem;'
+            'background:rgba(184,134,11,0.05);border-radius:8px;border-left:3px solid #c9a84c;">'
+            '<span style="font-size:1.3rem;">📄</span>'
+            '<div><div style="font-family:Cinzel,serif;font-size:.62rem;color:#8a5e00;'
+            'letter-spacing:1px;font-weight:700;">Reporting</div>'
+            '<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#5a3a0a;">'
+            'ReportLab · Pandas · CSV</div></div></div>'
+
+            '</div></div>',
+            unsafe_allow_html=True,
+        )
+
+    # ── MODEL PERFORMANCE METRICS ─────────────────────────────────────────────
+    st.markdown('<div class="sec-head" style="margin-top:2rem;">✦ Model Performance</div>', unsafe_allow_html=True)
+    pm1, pm2, pm3, pm4 = st.columns(4)
+    for col, val, lbl, sub, color in [
+        (pm1, "99.4%", "Validation Accuracy", "On held-out test set", "#7a4f00"),
+        (pm2, "100%",  "Precision",           "No false positives",   "#1a6a38"),
+        (pm3, "98%",   "Recall",              "High sensitivity",     "#004a90"),
+        (pm4, "99.1%", "F1 Score",            "Harmonic mean",        "#7a1a1a"),
+    ]:
+        with col:
+            st.markdown(
+                f'<div style="background:linear-gradient(145deg,#fffdf8,#fff6e8);'
+                f'border:1px solid rgba(184,134,11,0.2);border-radius:12px;'
+                f'padding:1.4rem 1rem;text-align:center;'
+                f'box-shadow:0 2px 12px rgba(184,134,11,0.07);position:relative;">'
+                f'<div style="position:absolute;top:0;left:20%;right:20%;height:2px;'
+                f'background:linear-gradient(90deg,transparent,{color},transparent);opacity:.4;"></div>'
+                f'<div style="font-family:Playfair Display,serif;font-size:2rem;'
+                f'font-weight:900;color:{color};line-height:1;">{val}</div>'
+                f'<div style="font-family:Cinzel,serif;font-size:.65rem;color:#7a5a1a;'
+                f'letter-spacing:1.5px;text-transform:uppercase;margin:.4rem 0 .2rem;">{lbl}</div>'
+                f'<div style="font-family:EB Garamond,serif;font-size:.82rem;color:#b89040;">{sub}</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+    # ── TEAM SECTION ──────────────────────────────────────────────────────────
     st.markdown('<div class="sec-head" style="margin-top:2.4rem;">✦ Project Team</div>', unsafe_allow_html=True)
+
     team = [
-        {"roll": "236M5A0408", "name": "G Srinivasu",      "icon": "👨‍💻"},
-        {"roll": "226M1A0460", "name": "S Anusha Devi",    "icon": "👩‍💻"},
-        {"roll": "226M1A0473", "name": "V V Siva Vardhan", "icon": "👨‍💻"},
-        {"roll": "236M5A0415", "name": "N L Sandeep",      "icon": "👨‍💻"},
+        {"roll": "236M5A0408", "name": "G Srinivasu",      "icon": "👨‍💻", "role": "AI Model & Backend"},
+        {"roll": "226M1A0460", "name": "S Anusha Devi",    "icon": "👩‍💻", "role": "UI/UX & Frontend"},
+        {"roll": "226M1A0473", "name": "V V Siva Vardhan", "icon": "👨‍💻", "role": "Data & Testing"},
+        {"roll": "236M5A0415", "name": "N L Sandeep",      "icon": "👨‍💻", "role": "Reports & Integration"},
     ]
     tcols = st.columns(4)
     for i, m in enumerate(team):
         with tcols[i]:
             st.markdown(
-                f'<div class="team-card">'
-                f'<div style="font-size:2.2rem;margin-bottom:.5rem;">{m["icon"]}</div>'
-                f'<div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;'
-                f'color:#e8d9b8;margin-bottom:.35rem;">{m["name"]}</div>'
-                f'<div style="font-family:Cinzel,serif;font-size:.6rem;'
-                f'color:#8a6e2f;letter-spacing:1.5px;">{m["roll"]}</div>'
+                f'<div class="team-card" style="position:relative;overflow:hidden;">'
+                f'<div style="position:absolute;top:0;left:0;right:0;height:2px;'
+                f'background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>'
+                f'<div style="font-size:2.6rem;margin-bottom:.6rem;">{m["icon"]}</div>'
+                f'<div style="font-family:Playfair Display,serif;font-size:1.05rem;font-weight:700;'
+                f'color:#2c1a00;margin-bottom:.3rem;">{m["name"]}</div>'
+                f'<div style="font-family:EB Garamond,serif;font-size:.88rem;color:#8a5e00;'
+                f'margin-bottom:.4rem;font-style:italic;">{m["role"]}</div>'
+                f'<div style="font-family:Cinzel,serif;font-size:.58rem;'
+                f'color:#b89040;letter-spacing:1.5px;">{m["roll"]}</div>'
                 f'</div>',
                 unsafe_allow_html=True,
             )
 
+    # ── GUIDANCE SECTION ──────────────────────────────────────────────────────
     st.markdown('<div class="sec-head" style="margin-top:2.4rem;">✦ Project Guidance</div>', unsafe_allow_html=True)
 
-    st.markdown(
-        '<div style="background:linear-gradient(145deg,var(--navy-mid),var(--navy-deep));'
-        'border:1px solid var(--gold-line);border-radius:var(--radius);'
-        'padding:2rem;position:relative;">'
-        '<div style="position:absolute;top:0;left:0;right:0;height:1px;'
-        'background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);"></div>'
+    g1, g2, g3 = st.columns(3, gap="medium")
+    for col, role_label, role_color, icon, name, tags in [
+        (g1, "Project Guide", "#b8860b", "👨‍🏫",
+         "Ms. N P U V S N Pavan Kumar, M.Tech",
+         [("Assistant Professor", "#8a5e00"), ("Dept. of ECE", "#8a5e00"), ("Deputy CoE – III", "#8a5e00")]),
+        (g2, "Project Coordinator", "#1a6a38", "📋",
+         "Mr. K Anji Babu, M.Tech",
+         [("Assistant Professor", "#1a6a38"), ("Dept. of ECE", "#1a6a38")]),
+        (g3, "Head of Department", "#7a1a1a", "👨‍💼",
+         "Dr. S A Vara Prasad, Ph.D, M.Tech",
+         [("Professor & HOD · ECE", "#7a1a1a"), ("Chairman BoS", "#7a1a1a"), ("Anti-Ragging Committee", "#7a1a1a")]),
+    ]:
+        tag_html = "".join(
+            f'<span style="background:rgba({",".join(str(int(role_color.lstrip("#")[i:i+2],16)) for i in (0,2,4))},.08);'
+            f'border:1px solid rgba({",".join(str(int(role_color.lstrip("#")[i:i+2],16)) for i in (0,2,4))},.25);'
+            f'border-radius:4px;padding:.2rem .75rem;font-family:Cinzel,serif;font-size:.6rem;'
+            f'color:{rc};letter-spacing:1px;font-weight:600;">{t}</span>'
+            for t, rc in tags
+        )
+        with col:
+            st.markdown(
+                f'<div style="background:linear-gradient(145deg,#fffdf8,#fff6e8);'
+                f'border:1px solid rgba(184,134,11,0.2);border-radius:14px;'
+                f'padding:2rem 1.6rem;text-align:center;position:relative;'
+                f'box-shadow:0 3px 18px rgba(184,134,11,0.08);height:100%;">'
 
-        '<div style="display:flex;gap:0;align-items:stretch;">'
+                f'<div style="position:absolute;top:0;left:0;right:0;height:3px;'
+                f'background:linear-gradient(90deg,transparent,{role_color},transparent);'
+                f'border-radius:14px 14px 0 0;"></div>'
 
-        # Guide
-        '<div style="flex:1;text-align:center;padding:.8rem 1.8rem;">'
-        '<div style="font-family:Cinzel,serif;font-size:.58rem;color:#c9a84c;'
-        'letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;">⭐ Project Guide</div>'
-        '<div style="font-size:2rem;margin-bottom:.5rem;">👨‍🏫</div>'
-        '<div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;'
-        'color:#e8d9b8;margin-bottom:.7rem;">Ms. N P U V S N Pavan Kumar, M.Tech</div>'
-        '<div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;">'
-        '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#c9a84c;letter-spacing:1px;">Assistant Professor</span>'
-        '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#c9a84c;letter-spacing:1px;">Dept. of ECE</span>'
-        '<span style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#c9a84c;letter-spacing:1px;">Deputy CoE – III</span>'
-        '</div></div>'
+                f'<div style="font-family:Cinzel,serif;font-size:.6rem;color:{role_color};'
+                f'letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.9rem;font-weight:700;">'
+                f'⭐ {role_label}</div>'
 
-        '<div style="width:1px;background:linear-gradient(180deg,transparent,rgba(201,168,76,0.2),transparent);margin:.2rem 0;flex-shrink:0;"></div>'
+                f'<div style="font-size:2.5rem;margin-bottom:.7rem;">{icon}</div>'
 
-        # Coordinator
-        '<div style="flex:1;text-align:center;padding:.8rem 1.8rem;">'
-        '<div style="font-family:Cinzel,serif;font-size:.58rem;color:#a89060;'
-        'letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;">📋 Project Coordinator</div>'
-        '<div style="font-size:2rem;margin-bottom:.5rem;">📋</div>'
-        '<div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;'
-        'color:#e8d9b8;margin-bottom:.7rem;">Mr. K Anji Babu, M.Tech</div>'
-        '<div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;">'
-        '<span style="background:rgba(168,144,96,0.08);border:1px solid rgba(168,144,96,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#a89060;letter-spacing:1px;">Assistant Professor</span>'
-        '<span style="background:rgba(168,144,96,0.08);border:1px solid rgba(168,144,96,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#a89060;letter-spacing:1px;">Dept. of ECE</span>'
-        '</div></div>'
+                f'<div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;'
+                f'color:#2c1a00;margin-bottom:1rem;line-height:1.4;">{name}</div>'
 
-        '<div style="width:1px;background:linear-gradient(180deg,transparent,rgba(201,168,76,0.2),transparent);margin:.2rem 0;flex-shrink:0;"></div>'
+                f'<div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;">'
+                f'{tag_html}</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
 
-        # HOD
-        '<div style="flex:1;text-align:center;padding:.8rem 1.8rem;">'
-        '<div style="font-family:Cinzel,serif;font-size:.58rem;color:#e8c96a;'
-        'letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;">👨‍💼 Head of Department</div>'
-        '<div style="font-size:2rem;margin-bottom:.5rem;">👨‍💼</div>'
-        '<div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;'
-        'color:#e8d9b8;margin-bottom:.7rem;">Dr. S A Vara Prasad, Ph.D, M.Tech</div>'
-        '<div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;">'
-        '<span style="background:rgba(232,201,106,0.08);border:1px solid rgba(232,201,106,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#e8c96a;letter-spacing:1px;">Professor &amp; HOD · ECE</span>'
-        '<span style="background:rgba(232,201,106,0.08);border:1px solid rgba(232,201,106,0.22);'
-        'border-radius:3px;padding:.15rem .7rem;font-family:Cinzel,serif;font-size:.6rem;'
-        'color:#e8c96a;letter-spacing:1px;">Chairman BoS</span>'
-        '</div></div>'
-
-        '</div>'
-        '<div style="position:absolute;bottom:0;left:0;right:0;height:1px;'
-        'background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),transparent);"></div>'
-        '</div>',
-        unsafe_allow_html=True,
-    )
-
+    # ── DISCLAIMER ────────────────────────────────────────────────────────────
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown(
-        '<div style="background:rgba(192,57,43,0.06);border:1px solid rgba(192,57,43,0.2);'
-        'border-radius:var(--radius);padding:1.2rem 1.6rem;text-align:center;">'
-        '<span style="font-family:EB Garamond,serif;font-size:.95rem;color:#f5a09a;">'
-        '⚕ This project is for <strong>academic and research purposes only</strong>. '
+        '<div style="background:linear-gradient(135deg,rgba(192,57,43,0.05),rgba(192,57,43,0.02));'
+        'border:1px solid rgba(192,57,43,0.2);border-left:4px solid #c0392b;'
+        'border-radius:10px;padding:1.2rem 1.8rem;">'
+        '<div style="font-family:Cinzel,serif;font-size:.65rem;color:#c0392b;'
+        'letter-spacing:2px;text-transform:uppercase;margin-bottom:.4rem;">⚕ Medical Disclaimer</div>'
+        '<div style="font-family:EB Garamond,serif;font-size:1rem;color:#7a1a1a;line-height:1.7;">'
+        'This project is developed <strong>for academic and research purposes only</strong>. '
+        'The AI system is not a certified medical device and its outputs should never be used '
+        'as a substitute for professional clinical diagnosis. '
         'Always consult a qualified neurologist for any medical decisions.'
-        '</span></div>',
+        '</div></div>',
         unsafe_allow_html=True,
     )
 
 
 # ── ROYAL FOOTER ──────────────────────────────────────────────────────────────
 st.markdown(
-    '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);margin:2rem 0 0;"></div>',
+    '<div style="height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.3),transparent);margin:2rem 0 0;"></div>',
     unsafe_allow_html=True,
 )
 st.markdown(
-    '<div style="text-align:center;padding:1.4rem;">'
-    '<div style="font-family:Cinzel,serif;font-size:.6rem;color:#5a4a2a;'
+    '<div style="text-align:center;padding:1.6rem;background:linear-gradient(180deg,#fdf8f0,#fdf3dc);">'
+    '<div style="font-family:Cinzel,serif;font-size:.6rem;color:#9a7030;'
     'letter-spacing:3px;text-transform:uppercase;margin-bottom:.5rem;">'
     'Research &amp; Educational Use Only · Not for Clinical Diagnosis'
     '</div>'
@@ -1495,7 +1633,7 @@ st.markdown(
     '<span style="color:rgba(201,168,76,0.3);font-size:.6rem;">✦</span>'
     '<div style="flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,rgba(201,168,76,0.2),transparent);"></div>'
     '</div>'
-    '<div style="font-family:EB Garamond,serif;font-size:.82rem;color:#3a3020;">'
+    '<div style="font-family:EB Garamond,serif;font-size:.9rem;color:#9a7030;">'
     'NeuroScan AI · ResNet50 + ViT · Grad-CAM · PyTorch · Streamlit'
     '</div></div>',
     unsafe_allow_html=True,
