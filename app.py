@@ -27,8 +27,8 @@ import pandas as pd
 # ══════════════════════════════════════════════════════════════════════════════
 #  CONFIG
 # ══════════════════════════════════════════════════════════════════════════════
-GDRIVE_FILE_ID = "14DQ_8Dy1iV9F0HNIp5WqONcdMDhV7ozf"
-MODEL_PATH     = "hybrid_rv_best.pth"
+GDRIVE_FILE_ID = "1Sf4U95DCqx1E8_BIicCie6V9aaCYY7nK"
+MODEL_PATH     = "hybrid_rv_final.pth"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
