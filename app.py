@@ -27,8 +27,8 @@ import pandas as pd
 # ══════════════════════════════════════════════════════════════════════════════
 #  CONFIG
 # ══════════════════════════════════════════════════════════════════════════════
-GDRIVE_FILE_ID = "1p2uIwGMGI06iPyuHYeqUAw2EtBN53vvq"
-MODEL_PATH     = "new_ntau.pth"
+GDRIVE_FILE_ID = "14DQ_8Dy1iV9F0HNIp5WqONcdMDhV7ozf"
+MODEL_PATH     = "hybrid_rv_best.pth"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
